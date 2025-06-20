@@ -25,7 +25,7 @@ app.use((req, res, next) => {
         if (data && typeof data === 'object') {
             const responseData = {
                 status: data.status,
-                creator: settings.apiSettings.creator || "Created Using Rynn UI",
+                creator: settings.apiSettings.creator || "Xeyyzu APIs Based",
                 ...data
             };
             return originalJson.call(this, responseData);
@@ -55,7 +55,7 @@ console.log(chalk.bgHex('#90EE90').hex('#333').bold(' Load Complete! ✓ '));
 console.log(chalk.bgHex('#90EE90').hex('#333').bold(` Total Routes Loaded: ${totalRoutes} `));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'api-page', 'index.html'));
+    res.sendFile(path.join(__dirname, 'api-page', 'landing.html'));
 });
 
 app.use((req, res, next) => {
